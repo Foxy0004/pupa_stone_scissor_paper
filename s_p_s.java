@@ -14,9 +14,19 @@ public class s_p_s {
             System.out.println("error");
         } else {
             Random random = new Random();
-            int computerIndex = random.nextInt(3);
-
-            
+            int computerIndex = random.nextInt( 3);
+            System.out.println("comp: " + computerChoice);
+            {
+                if( user == computerIndex) {
+                    System.out.println("tie");
+                    }else if ((user == st && computerIndex == sc) ||
+                            (user == pa && computerIndex == st) ||
+                            (user == sc && computerIndex == pa)) {
+                        System.out.println("win");
+                    } else {
+                        System.out.println("lose");
+                }
+            }
         }
     }
 }
